@@ -1,0 +1,38 @@
+@media screen and (max-width:760px){
+    .icon{
+        padding: 0%;
+        order: 2;
+        margin: auto;
+    }
+    .navbar-nav{
+        margin-left: 0px;
+        display: flex;
+    }
+}
+.deep{
+    display: none;
+    list-style-type: none;
+    transform: translateX(-200px);
+    border: 2px solid rgb(253, 250, 250);
+    border-radius: 5px;
+    align-items:space-evenly;
+    width: 200px;
+    height: 230px;
+    background-color: white;
+    position: absolute;
+}
+.dropdown-menu li:nth-child(7):hover .deep{
+    display: block;
+}
+#meee:hover{
+    color: white;
+    transition: 0.5s;
+}
+.under{
+    /* border: 5px solid black; */
+    
+    /* margin-top: 100px; */
+    /* height: 200px; */
+    /* position:relative; */
+    
+}
