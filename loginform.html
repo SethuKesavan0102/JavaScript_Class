@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #password{
+            margin-left: 63px;
+        }
+        #username{
+            margin-left: 60px;
+        }
+        fieldset{
+        border: 2px solid yellowgreen;
+        width: 350px;
+        margin-left: 400px;
+        margin-top: 200px;
+        padding-left: 20px;
+        position: absolute;
+        }
+        #form{
+            position: absolute;
+        }
+        @media screen and (max-width: 768px) {
+            fieldset{
+                margin-left: 50px;
+                margin-top: auto;
+                width: auto;
+            }
+            #password{
+                margin: auto;
+            }
+            #username{
+                margin: auto;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="form">
+        <!-- <img src="https://www.shutterstock.com/image-vector/internet-digital-syber-security-technology-260nw-1518108761.jpg" alt="" height="700px" > -->
+        <form action="" id="for" onsubmit="demo1(event)">
+            <fieldset>
+                <legend>Login Form</legend>
+                <label for="username"><b>Username : </b></label>
+                <input type="text" name="username" id="username" required><br><br>
+
+                <label for="password"><b>Password : </b></label>
+                <input type="password" name="password" id="password" required><br><br>
+
+                <label for="cpassword"><b>Confirm Password : </b></label>
+                <input type="password" name="cpassword" id="cpassword" required> <br><br>
+
+                <!-- <input type="submit" value="Submit"> -->
+                 <button> <a href="login.html" target="_blank" style="text-decoration: none; color: black;"> submit</a></button>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+<script>
+    function demo1(event){
+        event.preventDefault()
+        var username = document.getElementById("username").value 
+        var password = document.getElementById("password").value 
+        var cpassword = document.getElementById("cpassword").value
+
+        if(username == "sethu"  && password == "0102" && cpassword == password){
+            console.log("login successfull");
+            alert("login successfully")
+        }else{
+            console.log("login failed");
+            alert("login failed")
+            
+        }
+        demo2()
+        localStorage.setItem("user",username)
+    }
+    function demo2(){
+        var username = document.getElementById("username").value = ""
+        var password = document.getElementById("password").value = ""
+        var cpassword = document.getElementById("cpassword").value = ""
+
+    }
+</script>
+</html>
