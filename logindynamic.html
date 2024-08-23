@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="demo1()">
+    Username : <input type="text" name="name" id="name">
+   Password : <input type="password" name="password" id="password">
+    <button>submit</button>
+</form>
+</body>
+<script>
+    function demo1(){
+        var a = document.getElementById("name").value 
+        var b = document.getElementById("password").value 
+        localStorage.setItem("name", a)
+        localStorage.setItem("password",b)
+
+        var c = localStorage.getItem("name")
+        var d = localStorage.getItem("password")
+        if(a == c && b == d){
+            alert("okay")
+        }else{
+            alert("wrong")
+        }
+    }
+</script>
+</html>
