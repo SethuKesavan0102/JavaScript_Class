@@ -71,7 +71,8 @@
         var cpassword = document.getElementById("cpassword").value
         var otp = document.getElementById("otp").value
        
-        if(username == "sethu"  && password == "0102" && cpassword == password && otp == a){
+       
+        if(username == "sethu"  && password == "0102" && cpassword == password && otp == c){
             window.location.replace("login.html")
         }else{
             // console.log("login failed");
@@ -89,8 +90,13 @@
 
     }
     var a = Math.trunc(Math.random()*1000000)
+ 
+    var c = localStorage.getItem("name")
+
     function demo3(){
-        alert(a)
+        // alert(a)
+        console.log(a);
+        localStorage.setItem("name",a)
     }
     // function demo4(){
     //     alert(a)
