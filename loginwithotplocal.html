@@ -51,12 +51,11 @@
                 <input type="password" name="password" id="password" ><br><br>
 
                 <label for="cpassword"><b>Confirm Password : </b></label>
-                <input type="password" name="cpassword" id="cpassword" onchange="demo3()"> <br><br>
+                <input type="password" name="cpassword" id="cpassword" onchange="setTimeout(demo3,5000)"> <br><br>
 
                 <input type="text" name="otp" id="otp" ><br>
-                <button >Resent OTP</button>
+                <!-- <button >Resent OTP</button> -->
 
-                <!-- <input type="submit" value="Submit"> -->
                  <button  > submit</button>
             </fieldset>
         </form>
@@ -70,28 +69,30 @@
         var password = document.getElementById("password").value 
         var cpassword = document.getElementById("cpassword").value
         var otp = document.getElementById("otp").value
-       
+        var c = localStorage.getItem("name")
        
         if(username == "sethu"  && password == "0102" && cpassword == password && otp == c){
-            window.location.replace("login.html")
+            window.location.assign("login.html")
         }else{
             // console.log("login failed");
             alert("login failed")
             
         }
       
-        demo2()
         localStorage.setItem("user",username)
+        
+        demo2()
     }
     function demo2(){
         var username = document.getElementById("username").value = ""
         var password = document.getElementById("password").value = ""
         var cpassword = document.getElementById("cpassword").value = ""
+        var otp = document.getElementById("otp").value = ""
 
     }
     var a = Math.trunc(Math.random()*1000000)
  
-    var c = localStorage.getItem("name")
+   
 
     function demo3(){
         // alert(a)
