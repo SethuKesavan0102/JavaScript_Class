@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const b = 0
+    // const b = 1
+    try{
+        if(b==0){
+            throw("can't divide by zero")           //throw error message by us
+            // console.log("can't divide by zero");
+            
+        }
+        else{
+            var c=20/b
+        }
+    }
+    catch(e)
+    {
+        console.log(e);
+    }
+    finally
+    {
+        console.log("finally" + " " + c);
+    }
+</script>
+</html>

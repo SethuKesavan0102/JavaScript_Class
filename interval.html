@@ -9,6 +9,9 @@
     <p id="demo"></p>
     <button onclick="start()"></button>
     <button onclick="myStop()"></button>
+
+    <h2 id="sample"></h2>
+    <button onclick="myStopFunction()"></button>
     
 </body>
 <script>
@@ -26,5 +29,25 @@ function myStart(){
     document.getElementById("demo").innerHTML = date.toLocaleTimeString()
 }
 
+function myStop(){
+    clearInterval(myInterval)
+}
+
+function start(){
+    setInterval(myStart,1000)
+}
+
+
+// settimeout / cleartimeout
+
+const myTimeout = setTimeout(myGreeting,5000)
+
+function myGreeting(){
+    document.getElementById("sample").innerHTML = "Happy Birthday!"
+}
+
+function myStopFunction(){
+    clearTimeout(myTimeout)
+}
 </script>
 </html>
